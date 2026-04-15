@@ -1,0 +1,11 @@
+@reference "./../../App.css";
+.icono {
+    @apply h-6 w-6;
+}
+.vinculo {
+    @apply flex items-center px-4 hover:bg-gray-200;
+    height: 48px;
+}
+.texto {
+    @apply ml-2 text-sm font-semibold text-gray-900;
+}

@@ -1,7 +1,9 @@
+import "./Pie.css";
+
 function Pie() {
   return (
-    <footer>
-      <small> Desarrollado y diseñado por Xavier Reyes Ochoa. ©2030. Todos los
+    <footer className="pie">
+      <small> Desarrollado y diseñado por Alejandro Jose Zapata Baez. ©2030. Todos los
         derechos reservados.</small>
     </footer>
   );

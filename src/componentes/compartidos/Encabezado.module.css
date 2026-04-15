@@ -1,7 +1,7 @@
 @reference "./../../App.css";
 
 .encabezado {
-    @apply h-8 flex justify-between shadow bg-white text-gray-700;
+    @apply h-8 flex justify-between shadow bg-white text-gray-700 relative;
 }
 
 .contenedor {
@@ -20,10 +20,5 @@
     @apply text-lg font-semibold text-gray-900 uppercase;
 }
 
-.vinculo {
-    @apply flex items-center px-4 h-10 hover:bg-gray-200;
-}
 
-.icono {
-    @apply h-6 w-6;
-}
+
