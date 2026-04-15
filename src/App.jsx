@@ -1,16 +1,17 @@
-import { useState } from 'react'
+import React from 'react';
 import './App.css'
+import Principal from './componentes/compartidos/Principal';
+import Pie from './componentes/compartidos/Pie';
+import Encabezado from './componentes/compartidos/Encabezado';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-
-
-      <section id="spacer"></section>
-    </>
-  )
+    <div className="App">
+     <Encabezado></Encabezado>
+      <Principal></Principal>
+      <Pie></Pie>
+    </div>
+  );
 }
 
-export default App
+export default App;
