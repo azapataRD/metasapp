@@ -1,7 +1,9 @@
 @reference "./../../App.css";
 
 .encabezado {
-    @apply h-8 flex justify-between shadow bg-white text-gray-700 relative;
+    @apply  flex justify-between shadow bg-white text-gray-700 relative;
+    /*  h-xl  */
+    height: 48px; /* Altura fija de 48 píxeles */
 }
 
 .contenedor {

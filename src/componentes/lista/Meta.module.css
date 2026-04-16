@@ -1,0 +1,44 @@
+@reference "./../../App.css";
+
+.meta {
+    @apply flex p-2 justify-between;
+}
+
+.icono {
+    /* nm-inset-gray-100 */
+    background-color: #f3f4f6;
+    /* Tailwind gray-100 */
+    box-shadow: inset 6px 6px 12px #d1d5db,
+        /* sombra más oscura */
+        inset -6px -6px 12px #ffffff;
+    /* sombra más clara */
+    border-radius: 8px;
+    /* opcional, para efecto neumórfico */
+
+    /* Gris claro */
+    color: #111827;
+    /* Texto gris oscuro para contraste */
+
+    padding: 1rem;
+    @apply h-10 w-10 rounded-full flex items-center justify-center text-xl;
+}
+
+.barra1 {
+    /*  nm-convex-gray-100 */
+    background-color: #f5f5f5;
+    /* Gris claro */
+    color: #111827;
+    /* Texto gris oscuro para contraste */
+    box-shadow: inset 4px 4px 6px #d1d5db,
+        inset -4px -4px 6px #ffffff;
+    /* Efecto "insertado" tipo neumorfismo */
+    border-radius: 8px;
+    padding: 1rem;
+    @apply h-1 w-28 rounded bg-blue-200;
+}
+
+.barra2 {
+    @apply h-1 rounded from-green-200 to-blue-500;
+    /* bg-gradient-to-l */
+    background: linear-gradient(to left, #3b82f6, #22c55e);
+}

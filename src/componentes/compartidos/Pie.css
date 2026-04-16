@@ -3,4 +3,5 @@
 .pie {
     @apply shadow from-pink-500 to-purple-500 h-8 text-xs pr-2 text-white relative;
     background: linear-gradient(to right, #3b82f6, #a855f7, #ec4899);
+    height: 16px;
 }
