@@ -11,7 +11,7 @@
     -5px -5px 15px rgba(255, 255, 255, 0.7);
   /* Sombra doble para efecto neumórfico */
   padding: 20px;
-   /* fin nm-flat-white  */
+  /* fin nm-flat-white  */
 }
 
 .boton {
@@ -21,7 +21,7 @@
 .boton--negro {
   @apply text-white hover:bg-gray-800;
   /* nm-flat-gray-700  */
-  color: #374151;
+  /*color: #374151; */
   /* Texto */
   /* o */
   background-color: #374151;
@@ -44,11 +44,21 @@
   /* HEX */
   /* fin nm-flat-gray-100 */
 }
-.botones {
-  @apply from-gray-700 via-gray-200 to-gray-200 px-4 py-3 flex justify-between;
-  /*bg-gradient-to-r*/
-      height: 100vh; /* Ocupa toda la altura de la pantalla */
-    background: linear-gradient(to right, #4f46e5, #3b82f6);
-    /* Puedes usar cualquier color en formato HEX, RGB o nombre */
-    /*fin bg-gradient-to-r*/
+
+.label {
+  @apply block uppercase text-xs font-bold mb-6;
 }
+
+.input {
+  @apply w-full border rounded-xl p-2 focus:outline-none focus:bg-white focus:border-gray-500;
+  /*nm-inset-gray-100 */
+  background-color: #f3f4f6;
+  /* gris claro tipo Tailwind gray-100 */
+  border-radius: 12px;
+  /* bordes redondeados */
+  box-shadow: inset 4px 4px 6px #d1d5db,
+    /* sombra interna oscura */
+    inset -4px -4px 6px #ffffff;
+  /* sombra interna clara */
+}
+

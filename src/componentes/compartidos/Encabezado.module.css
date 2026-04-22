@@ -1,8 +1,8 @@
 @reference "./../../App.css";
 
-.encabezado {
+.ecabezado {
     @apply  flex justify-between shadow bg-white text-gray-700 relative;
-    /*  h-xl  */
+    /*  h-xl  bg-white*/
     height: 48px; /* Altura fija de 48 píxeles */
 }
 

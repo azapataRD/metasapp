@@ -1,9 +1,8 @@
 import estilos from './Meta.module.css';
 
-
 function Meta({icono, eventos, periodo, detalles, meta, completado}) {    
-
-    return (
+// <div className={estilos.meta + " tarjeta"}>
+    return (        
         <div className={estilos.meta + " tarjeta"}>
             <div className="flex items-center">
                 <div className={estilos.icono}>{icono}</div>

@@ -1,3 +1,4 @@
+import React from 'react';
 import estilos from './Principal.module.css';
 import Vinculo from './Vinculo';
 import ListaSVG from '../../img/lista.svg';
@@ -8,12 +9,12 @@ function Principal({ children }) {
     <div className={estilos.principal}>
       <aside className={estilos.aside}>
         <Vinculo
-          href="/lista"
+          to="/lista"
           texto="Lista de Metas"
           Icono={ListaSVG}>
         </Vinculo>
         <Vinculo
-          href="/crear"
+          to="/nueva"
           texto="Nueva Meta"
           Icono={NuevaSVG}>
         </Vinculo>
