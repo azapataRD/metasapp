@@ -2,6 +2,7 @@ import { useEffect, useState, useContext } from "react";
 import { Contexto } from "../../servicios/Memoria";
 import estilos from "./Detalles.module.css";
 import { useNavigate, useParams } from "react-router-dom";
+import { actualizaMeta, borrarMeta, crearMeta } from "../../servicios/Pedidos";
 
 function Detalles() {
 
@@ -26,28 +27,31 @@ function Detalles() {
 
     const navegar = useNavigate();
 
-    useEffect(() => {
-        const metaMemoria = estado.objetos[id];
-        if (!id) return;
+    const metaMemoria = estado.objetos[id];
 
+    useEffect(() => {
+        if (!id) return;
         if (!metaMemoria) {
             return navegar('/404');
         }
         setForm(metaMemoria);
-    }, [id]);
+    }, [id, metaMemoria, navegar]);
 
-    const crear = () => {
-        enviar({ tipo: 'crear', meta: form });
+    const crear = async () => {
+        const nuevaMeta = await crearMeta();
+        enviar({ tipo: 'crear', meta: nuevaMeta });
         navegar('/lista');
     }
 
-    const actualizar = () => {
-        enviar({ tipo: 'actualizar', meta: form });
+    const actualizar = async () => {
+        const metaActualizada = await actualizaMeta();
+        enviar({ tipo: 'actualizar', meta: metaActualizada });
         navegar('/lista');
     }
 
-    const borrar = () => {
-        enviar({ tipo: 'borrar', id });
+    const borrar = async () => {
+        const idBorrada = await borrarMeta();
+        enviar({ tipo: 'borrar', id: idBorrada });
         navegar('/lista');
     }
 
@@ -83,7 +87,7 @@ function Detalles() {
                             value={periodo}
                             onChange={e => onChange(e, 'periodo')}
                         >
-                            {opcionesDeFrecuencia.map(opcion => <option value={opcion}>{opcion}</option>)}
+                            {opcionesDeFrecuencia.map(opcion => <option key={opcion} value={opcion}>{opcion}</option>)}
                         </select>
                     </div>
                 </label>
@@ -121,7 +125,7 @@ function Detalles() {
                         value={icono}
                         onChange={e => onChange(e, 'icono')}
                     >
-                        {iconos.map(opcion => <option value={opcion}>{opcion}</option>)}
+                        {iconos.map(opcion => <option key={opcion} value={opcion}>{opcion}</option>)}
                     </select>
                 </label>
             </form>
